@@ -17,7 +17,7 @@ function App() {
           alt="logo"
         />
         <p>Look Up Mushroom</p>
-        <h1>[ ]</h1>
+        <h1>[ Collection ]</h1>
 
         <a
           className="App-link"
