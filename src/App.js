@@ -25,11 +25,12 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn more about Fungi
+          Learn more about Fungi here:
         </a>
       </header>
       <div className="leaflet-container">
         <h1>Save Mushroom Location</h1>
+        <h3>Map</h3>
         <MapContainer center={[45.4, -75.7]} zoom={5} scrollWheelZoom={false}>
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
