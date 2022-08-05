@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "./App.css";
+import { Icon } from "leaflet";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
+      <h1>MYCO-DEX</h1>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <img
+          src={
+            "https://www.homestratosphere.com/wp-content/uploads/2020/08/types-of-mushrooms-chart-aug032020-min.jpg"
+          }
+          // className="App-logo"
+          alt="logo"
+        />
+        <p>Look Up Mushroom</p>
+        <h1>[ ]</h1>
+
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://www.mushroomcouncil.com/#"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn more about Fungi
         </a>
       </header>
+      <div className="leaflet-container">
+        <h1>Save Mushroom Location</h1>
+        <MapContainer center={[45.4, -75.7]} zoom={5} scrollWheelZoom={false}>
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          />
+        </MapContainer>
+      </div>
     </div>
   );
 }
